@@ -32,6 +32,16 @@ a:hover {
     text-decoration: underline;
 }
 
+.page {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+.page > main {
+    flex: 1;
+}
+
 /* ===== CONTAINER / SECTION ===== */
 .container {
     max-width: 1200px;
@@ -48,7 +58,7 @@ a:hover {
 }
 
 /* ===== HEADER / FOOTER (базово) ===== */
-.site-header {
+.app-header {
     position: sticky;
     top: 0;
     z-index: 10;
@@ -56,7 +66,7 @@ a:hover {
     border-bottom: 1px solid var(--color-border-antiflash);
 }
 
-.site-footer {
+.app-footer {
     border-top: 1px solid var(--color-border-antiflash);
     background: var(--color-surface-seasalt);
     color: var(--color-text-battleship);
