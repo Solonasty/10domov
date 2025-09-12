@@ -1,0 +1,49 @@
+:root {
+  /* text */
+  --color-text-gunmetal: #1E2628;
+  --color-text-battleship: #8E9293;
+  --color-text-silver: #C7C9C9;
+  --color-text-burnt: #E56F3D;
+  --color-text-offwhite: #FFFFFF;
+
+  /* surface */
+  --color-surface-offwhite: #FFFFFF;
+  --color-surface-seasalt: #F6F8F8;
+  --color-surface-issabelline: #F5F1EE;
+  --color-surface-gunmetal: #1E2628;
+  --color-surface-charcoal: #374F59;
+
+  /* borders */
+  --color-border-antiflash: #E7EAEB;
+
+  /* attention */
+  --color-attention-imperial: #F05454;
+
+  /* семейство */
+  --font-sans: "SF Pro Display";
+
+  /* веса */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  /* desktop */
+  --fs-heading-1-d: 52px;  --lh-heading-1-d: 100%; --ls-heading-1-d: -2%; --fw-heading-1-d: var(--fw-bold);
+  --fs-heading-2-d: 30px;  --lh-heading-2-d: 100%; --ls-heading-2-d: -2%; --fw-heading-2-d: var(--fw-medium);
+  --fs-heading-3-d: 24px;  --lh-heading-3-d: 120%; --ls-heading-3-d: -2%; --fw-heading-3-d: var(--fw-medium);
+  --fs-heading-4-d: 20px;  --lh-heading-4-d: 120%; --ls-heading-4-d: -2%; --fw-heading-4-d: var(--fw-regular);
+  --fs-subtitle-d: 30px;   --lh-subtitle-d: 120%; --ls-subtitle-d: -2%; --fw-subtitle-d: var(--fw-regular);
+
+  --fs-btns-text-d: 14px;  --lh-btns-text-d: 120%; --ls-btns-text-d: -1%; --fw-btns-text-d: var(--fw-medium);
+
+  --fs-text-l-d: 18px;     --lh-text-l-d: 130%;  --ls-text-l-d: 0%;  --fw-text-l-d: var(--fw-regular);
+  --fs-text-m-d: 14px;     --lh-text-m-d: 140%;  --ls-text-m-d: 0%;  --fw-text-m-d: var(--fw-regular);
+  --fs-text-s-d: 12px;     --lh-text-s-d: 140%;  --ls-text-s-d: 0%;  --fw-text-s-d: var(--fw-regular);
+
+  /* mobile */
+  --fs-heading-1-m: 28px;  --lh-heading-1-m: 120%; --ls-heading-1-m: -2%; --fw-heading-1-m: var(--fw-bold);
+  --fs-heading-2-m: 24px;  --lh-heading-2-m: 100%; --ls-heading-2-m: -2%; --fw-heading-2-m: var(--fw-medium);
+  --fs-heading-3-m: 22px;  --lh-heading-3-m: 100%; --ls-heading-3-m: -2%; --fw-heading-3-m: var(--fw-medium);
+  --fs-heading-4-m: 18px;  --lh-heading-4-m: 120%; --ls-heading-4-m: -2%; --fw-heading-4-m: var(--fw-medium);
+  --fs-subtitle-m: 20px;   --lh-subtitle-m: 120%; --ls-subtitle-m: -2%; --fw-subtitle-m: var(--fw-regular);
+}

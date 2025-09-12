@@ -1,0 +1,80 @@
+/* базовое семейство из переменных */
+.typo-sans { font-family: var(--font-sans), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+
+/* ===== DESKTOP (по умолчанию) ===== */
+.h1 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-heading-1-d);
+  line-height: var(--lh-heading-1-d);
+  letter-spacing: -0.02em; /* из -2% */
+  font-weight: var(--fw-heading-1-d);
+}
+.h2 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-heading-2-d);
+  line-height: var(--lh-heading-2-d);
+  letter-spacing: -0.02em;
+  font-weight: var(--fw-heading-2-d);
+}
+.h3 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-heading-3-d);
+  line-height: var(--lh-heading-3-d);
+  letter-spacing: -0.02em;
+  font-weight: var(--fw-heading-3-d);
+}
+.h4 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-heading-4-d);
+  line-height: var(--lh-heading-4-d);
+  letter-spacing: -0.02em;
+  font-weight: var(--fw-heading-4-d);
+}
+.subtitle {
+  font-family: var(--font-sans);
+  font-size: var(--fs-subtitle-d);
+  line-height: var(--lh-subtitle-d);
+  letter-spacing: -0.02em;
+  font-weight: var(--fw-subtitle-d);
+}
+
+/* Текстовые стили */
+.text-l {
+  font-family: var(--font-sans);
+  font-size: var(--fs-text-l-d);
+  line-height: var(--lh-text-l-d);
+  letter-spacing: 0; /* в макете 0% */
+  font-weight: var(--fw-text-l-d);
+}
+.text-m {
+  font-family: var(--font-sans);
+  font-size: var(--fs-text-m-d);
+  line-height: var(--lh-text-m-d);
+  letter-spacing: 0;
+  font-weight: var(--fw-text-m-d);
+}
+.text-s {
+  font-family: var(--font-sans);
+  font-size: var(--fs-text-s-d);
+  line-height: var(--lh-text-s-d);
+  letter-spacing: 0;
+  font-weight: var(--fw-text-s-d);
+}
+
+/* Текст для кнопок */
+.btn-text {
+  font-family: var(--font-sans);
+  font-size: var(--fs-btns-text-d);
+  line-height: var(--lh-btns-text-d);
+  letter-spacing: -0.01em;
+  font-weight: var(--fw-btns-text-d);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 767px) {
+  .h1 { font-size: var(--fs-heading-1-m); line-height: var(--lh-heading-1-m); letter-spacing: -0.02em; font-weight: var(--fw-heading-1-m); }
+  .h2 { font-size: var(--fs-heading-2-m); line-height: var(--lh-heading-2-m); letter-spacing: -0.02em; font-weight: var(--fw-heading-2-m); }
+  .h3 { font-size: var(--fs-heading-3-m); line-height: var(--lh-heading-3-m); letter-spacing: -0.02em; font-weight: var(--fw-heading-3-m); }
+  .h4 { font-size: var(--fs-heading-4-m); line-height: var(--lh-heading-4-m); letter-spacing: -0.02em; font-weight: var(--fw-heading-4-m); }
+  .subtitle { font-size: var(--fs-subtitle-m); line-height: var(--lh-subtitle-m); letter-spacing: -0.02em; font-weight: var(--fw-subtitle-m); }
+}

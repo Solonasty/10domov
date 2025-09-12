@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-sans), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: var(--color-text-gunmetal);
+    background: var(--color-surface-offwhite);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+img,
+svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--color-text-burnt);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== CONTAINER / SECTION ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.section {
+    padding: 40px 0;
+}
+
+.section--alt {
+    background: var(--color-surface-seasalt);
+}
+
+/* ===== HEADER / FOOTER (базово) ===== */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--color-surface-offwhite);
+    border-bottom: 1px solid var(--color-border-antiflash);
+}
+
+.site-footer {
+    border-top: 1px solid var(--color-border-antiflash);
+    background: var(--color-surface-seasalt);
+    color: var(--color-text-battleship);
+}
+
+/* ===== UTILS ===== */
+.hidden {
+    display: none !important;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 16px;
+    }
+
+    .section {
+        padding: 28px 0;
+    }
+}
