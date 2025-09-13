@@ -33,20 +33,17 @@ a:hover {
 }
 
 .page {
-    min-height: 100dvh;
     display: flex;
     flex-direction: column;
+    min-height: 100dvh;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: beige;
 }
 
 .page > main {
     flex: 1;
-}
-
-/* ===== CONTAINER / SECTION ===== */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 24px;
 }
 
 .section {
@@ -57,7 +54,6 @@ a:hover {
     background: var(--color-surface-seasalt);
 }
 
-/* ===== HEADER / FOOTER (базово) ===== */
 .app-header {
     position: sticky;
     top: 0;
@@ -72,17 +68,6 @@ a:hover {
     color: var(--color-text-battleship);
 }
 
-/* ===== UTILS ===== */
-.hidden {
-    display: none !important;
-}
-
-.center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 @media (max-width: 767px) {
     .container {
         padding: 16px;
@@ -91,4 +76,157 @@ a:hover {
     .section {
         padding: 28px 0;
     }
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .8rem 1.2rem;
+    height: 65px;
+    border-radius: 40px;
+    border: 1px;
+    border-color: var(--color-border-antiflash);
+    background-color: var(--color-surface-offwhite-header);
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(5px);
+
+
+}
+
+.site-nav {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.site-nav__link {
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-7);
+    line-height: var(--fs-3);
+    letter-spacing: var(--ls-2);
+    color: var(--color-text-black);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.brand__logo {
+    height: 2rem;
+    width: auto;
+}
+
+.header__icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+
+}
+
+.header__icon-phone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-text-black);
+    border-radius: 20px;
+}
+
+.btn {
+    transition: background .12s ease, color .12s ease, border-color .12s ease, box-shadow .12s ease, filter .12s ease;
+}
+
+.btn--pill {
+    border-radius: 999px;
+    padding: 12px 22px;
+    min-height: 44px;
+    gap: 10px;
+}
+
+.btn__icon {
+    inline-size: 20px;
+    block-size: 20px;
+    flex: 0 0 20px;
+}
+
+.btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-text-gunmetal) 12%, transparent);
+}
+
+/* курсор/общие состояния (переопределяем базу) */
+.btn:disabled,
+.btn[disabled] {
+cursor: not-allowed;
+transform: none;
+opacity: 1;              /* важно: не даём общей прозрачности — дальше зададим точные цвета */
+}
+
+.btn--filled {
+background: var(--color-text-gunmetal);
+color: var(--color-text-offwhite);
+border: 1px solid transparent;
+}
+
+.btn--filled:hover:not(:disabled) {
+background: var(--color-surface-charcoal);
+}
+/* clicked */
+.btn--filled:active:not(:disabled) {
+filter: brightness(0.92);
+}
+/* disabled */
+.btn--filled:disabled {
+background: var(--color-surface-seasalt);
+color: var(--color-text-silver);
+border-color: transparent;
+}
+
+
+/* =========================================================
+6) ICON ONLY
+Разметка:
+<button class="btn btn--icon btn--filled" aria-label="…">…</button>
+Или с outlined: <button class="btn btn--icon btn--outlined">…</button>
+========================================================= */
+.btn--icon {
+inline-size: 44px;
+block-size: 44px;
+padding: 0;
+border-radius: 999px;
+display: inline-grid;
+place-items: center;
+}
+
+/* filled icon */
+.btn--icon.btn--filled { 
+background: var(--color-text-gunmetal); 
+color: var(--color-text-offwhite); 
+border: 1px solid transparent;
+}
+.btn--icon.btn--filled:hover:not(:disabled) { background: var(--color-surface-charcoal); }
+.btn--icon.btn--filled:active:not(:disabled) { filter: brightness(0.92); }
+.btn--icon.btn--filled:disabled { background: var(--color-surface-seasalt); color: var(--color-text-silver); }
+
+/* outlined icon */
+.btn--icon.btn--outlined {
+background: var(--color-surface-offwhite);
+color: var(--color-text-gunmetal);
+border: 1px solid var(--color-border-antiflash);
+}
+.btn--icon.btn--outlined:hover:not(:disabled) { background: var(--color-surface-seasalt); }
+.btn--icon.btn--outlined:active:not(:disabled) {
+background: var(--color-text-gunmetal);
+color: var(--color-text-offwhite);
+border-color: var(--color-text-gunmetal);
+}
+.btn--icon.btn--outlined:disabled {
+background: var(--color-surface-offwhite);
+color: var(--color-text-silver);
+border-color: var(--color-border-antiflash);
 }

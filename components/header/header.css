@@ -1,12 +1,4 @@
-.app-header {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background: var(--color-surface-offwhite);
-    border-bottom: 1px solid var(--color-border-antiflash);
-}
-
-.app-header .header__container {
+.header__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -60,7 +52,7 @@
 }
 
 @media (max-width: 767px) {
-    .app-header .header__container { 
+    .header__container { 
         gap: 12px;
         padding-block: 10px;
     }

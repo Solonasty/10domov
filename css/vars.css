@@ -1,5 +1,6 @@
 :root {
   /* text */
+  --color-text-black: #2E2F33;
   --color-text-gunmetal: #1E2628;
   --color-text-battleship: #8E9293;
   --color-text-silver: #C7C9C9;
@@ -12,6 +13,7 @@
   --color-surface-issabelline: #F5F1EE;
   --color-surface-gunmetal: #1E2628;
   --color-surface-charcoal: #374F59;
+  --color-surface-offwhite-header: #FFFCFCF2;
 
   /* borders */
   --color-border-antiflash: #E7EAEB;
@@ -26,6 +28,28 @@
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-bold: 700;
+
+  /* размер шрифта */
+  --fs-1: 52px;
+  --fs-2: 30px;
+  --fs-3: 28px;
+  --fs-4: 24px;
+  --fs-5: 20px;
+  --fs-6: 18px;
+  --fs-7: 14px;
+  --fs-8: 12px;
+
+  /* высота строк */
+  --fs-1: 140%;
+  --fs-2: 130%;
+  --fs-3: 120%;
+  --fs-4: 100%;
+
+  /* расстояние между букв */
+  --ls-1: -2%;
+  --ls-2: -1%;
+  --ls-3: 0%;
+
 
   /* desktop */
   --fs-heading-1-d: 52px;  --lh-heading-1-d: 100%; --ls-heading-1-d: -2%; --fw-heading-1-d: var(--fw-bold);

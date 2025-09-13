@@ -1,0 +1,239 @@
+/* =========================================================
+   ОБЩЕЕ (на все кнопки)
+   ========================================================= */
+   .btn {
+    transition: background .12s ease, color .12s ease, border-color .12s ease, box-shadow .12s ease, filter .12s ease;
+  }
+  
+  /* форма «пилюля» + базовая геометрия из макета */
+  .btn--pill { 
+    border-radius: 999px; 
+    padding: 12px 22px; 
+    min-height: 44px;
+    gap: 10px;
+  }
+  
+  /* иконка слева у текстовых кнопок */
+  .btn__icon { 
+    inline-size: 20px; 
+    block-size: 20px; 
+    flex: 0 0 20px; 
+  }
+  
+  /* фокус-обводка */
+  .btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-text-gunmetal) 12%, transparent);
+  }
+  
+  /* курсор/общие состояния (переопределяем базу) */
+  .btn:disabled,
+  .btn[disabled] {
+    cursor: not-allowed;
+    transform: none;
+    opacity: 1;              /* важно: не даём общей прозрачности — дальше зададим точные цвета */
+  }
+  
+  /* =========================================================
+     1) FILLED
+     ========================================================= */
+  /* default */
+  .btn--filled {
+    background: var(--color-text-gunmetal);
+    color: var(--color-text-offwhite);
+    border: 1px solid transparent;
+  }
+  /* hover */
+  .btn--filled:hover:not(:disabled) {
+    background: var(--color-surface-charcoal);
+  }
+  /* clicked */
+  .btn--filled:active:not(:disabled) {
+    filter: brightness(0.92);
+  }
+  /* disabled */
+  .btn--filled:disabled {
+    background: var(--color-surface-seasalt);
+    color: var(--color-text-silver);
+    border-color: transparent;
+  }
+  
+  /* =========================================================
+     2) OUTLINED
+     ========================================================= */
+  /* default */
+  .btn--outlined {
+    background: var(--color-surface-offwhite);
+    color: var(--color-text-gunmetal);
+    border: 1px solid var(--color-border-antiflash);
+  }
+  /* hover */
+  .btn--outlined:hover:not(:disabled) {
+    background: var(--color-surface-seasalt);
+  }
+  /* clicked (инверсия как в макете) */
+  .btn--outlined:active:not(:disabled) {
+    background: var(--color-text-gunmetal);
+    color: var(--color-text-offwhite);
+    border-color: var(--color-text-gunmetal);
+  }
+  /* disabled */
+  .btn--outlined:disabled {
+    background: var(--color-surface-offwhite);
+    color: var(--color-text-silver);
+    border-color: var(--color-border-antiflash);
+  }
+  
+  /* =========================================================
+     3) FILLED WITH BTN (split)
+     Разметка:
+     <div class="btn-split btn-split--filled">
+       <button class="btn btn--pill btn--filled btn-text btn-split__main">…</button>
+       <button class="btn btn--icon btn--filled btn-split__addon" aria-label="More">…</button>
+     </div>
+     ========================================================= */
+  .btn-split {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* зазор между основной частью и круглой кнопкой */
+  }
+  
+  /* основная часть — обычный filled, оставляем отступы как у .btn--pill */
+  .btn-split__main { }
+  
+  /* круглая доп.кнопка справа */
+  .btn-split__addon {
+    inline-size: 36px;
+    block-size: 36px;
+    border-radius: 999px;
+    display: inline-grid;
+    place-items: center;
+    padding: 0;               /* круг — без внутренних паддингов */
+  }
+  
+  /* hover синхронно затемняется */
+  .btn-split--filled .btn-split__main:hover:not(:disabled),
+  .btn-split--filled .btn-split__addon:hover:not(:disabled) {
+    background: var(--color-surface-charcoal);
+  }
+  /* clicked */
+  .btn-split--filled .btn-split__main:active:not(:disabled),
+  .btn-split--filled .btn-split__addon:active:not(:disabled) {
+    filter: brightness(0.92);
+  }
+  /* disabled — обе части серые */
+  .btn-split--filled .btn-split__main:disabled,
+  .btn-split--filled .btn-split__addon:disabled {
+    background: var(--color-surface-seasalt);
+    color: var(--color-text-silver);
+    border-color: transparent;
+  }
+  
+  /* =========================================================
+     4) OUTLINED WITH BTN (split)
+     Разметка:
+     <div class="btn-split btn-split--outlined">
+       <button class="btn btn--pill btn--outlined btn-text btn-split__main">…</button>
+       <button class="btn btn--icon btn--filled btn-split__addon" aria-label="More">…</button>
+     </div>
+     ========================================================= */
+  /* основная часть — outlined (как в п.2) уже определена */
+  
+  /* круглая доп.кнопка — тёмная как в макете */
+  .btn-split--outlined .btn-split__addon {
+    background: var(--color-text-gunmetal);
+    color: var(--color-text-offwhite);
+    border: 1px solid var(--color-text-gunmetal);
+  }
+  
+  /* hover: основная — светлый фон, круг — слегка темнее */
+  .btn-split--outlined .btn-split__main:hover:not(:disabled) {
+    background: var(--color-surface-seasalt);
+  }
+  .btn-split--outlined .btn-split__addon:hover:not(:disabled) {
+    background: var(--color-surface-charcoal);
+    border-color: var(--color-surface-charcoal);
+  }
+  
+  /* clicked: основная инвертируется, круг — лёгкое затемнение */
+  .btn-split--outlined .btn-split__main:active:not(:disabled) {
+    background: var(--color-text-gunmetal);
+    color: var(--color-text-offwhite);
+    border-color: var(--color-text-gunmetal);
+  }
+  .btn-split--outlined .btn-split__addon:active:not(:disabled) {
+    filter: brightness(0.92);
+  }
+  
+  /* disabled */
+  .btn-split--outlined .btn-split__main:disabled {
+    background: var(--color-surface-offwhite);
+    color: var(--color-text-silver);
+    border-color: var(--color-border-antiflash);
+  }
+  .btn-split--outlined .btn-split__addon:disabled {
+    background: var(--color-surface-seasalt);
+    color: var(--color-text-silver);
+    border-color: var(--color-border-antiflash);
+  }
+  
+  /* =========================================================
+     5) LINK
+     ========================================================= */
+  /* default */
+  .btn--link {
+    background: transparent;
+    color: var(--color-text-gunmetal);
+    border: 1px solid transparent;
+    padding: 0; 
+    border-radius: 0;
+  }
+  /* hover */
+  .btn--link:hover:not(:disabled) { text-decoration: underline; }
+  /* clicked */
+  .btn--link:active:not(:disabled) { filter: brightness(0.85); }
+  /* disabled */
+  .btn--link:disabled { color: var(--color-text-silver); text-decoration: none; }
+  
+  /* =========================================================
+     6) ICON ONLY
+     Разметка:
+     <button class="btn btn--icon btn--filled" aria-label="…">…</button>
+     Или с outlined: <button class="btn btn--icon btn--outlined">…</button>
+     ========================================================= */
+  .btn--icon {
+    inline-size: 44px;
+    block-size: 44px;
+    padding: 0;
+    border-radius: 999px;
+    display: inline-grid;
+    place-items: center;
+  }
+  
+  /* filled icon */
+  .btn--icon.btn--filled { 
+    background: var(--color-text-gunmetal); 
+    color: var(--color-text-offwhite); 
+    border: 1px solid transparent;
+  }
+  .btn--icon.btn--filled:hover:not(:disabled) { background: var(--color-surface-charcoal); }
+  .btn--icon.btn--filled:active:not(:disabled) { filter: brightness(0.92); }
+  .btn--icon.btn--filled:disabled { background: var(--color-surface-seasalt); color: var(--color-text-silver); }
+  
+  /* outlined icon */
+  .btn--icon.btn--outlined {
+    background: var(--color-surface-offwhite);
+    color: var(--color-text-gunmetal);
+    border: 1px solid var(--color-border-antiflash);
+  }
+  .btn--icon.btn--outlined:hover:not(:disabled) { background: var(--color-surface-seasalt); }
+  .btn--icon.btn--outlined:active:not(:disabled) {
+    background: var(--color-text-gunmetal);
+    color: var(--color-text-offwhite);
+    border-color: var(--color-text-gunmetal);
+  }
+  .btn--icon.btn--outlined:disabled {
+    background: var(--color-surface-offwhite);
+    color: var(--color-text-silver);
+    border-color: var(--color-border-antiflash);
+  }
