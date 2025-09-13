@@ -63,9 +63,9 @@
 }
 
 .btn--pill {
-    border-radius: 999px;
-    padding: 12px 22px;
-    min-height: 44px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    height: 40px;
     gap: 10px;
 }
 
@@ -116,10 +116,10 @@ border-color: transparent;
 Или с outlined: <button class="btn btn--icon btn--outlined">…</button>
 ========================================================= */
 .btn--icon {
-inline-size: 44px;
-block-size: 44px;
+width: 40px;
+height: 40px;
 padding: 0;
-border-radius: 999px;
+border-radius: 50%;
 display: inline-grid;
 place-items: center;
 }
