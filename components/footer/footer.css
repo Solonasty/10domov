@@ -1,0 +1,5 @@
+.app-footer {
+    border-top: 1px solid var(--color-border-antiflash);
+    background: var(--color-surface-seasalt);
+    color: var(--color-text-battleship);
+}
