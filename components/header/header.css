@@ -12,8 +12,6 @@
     background-color: var(--color-surface-offwhite-header);
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(5px);
-
-
 }
 
 .site-nav {
@@ -80,32 +78,32 @@
     box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-text-gunmetal) 12%, transparent);
 }
 
-/* курсор/общие состояния (переопределяем базу) */
+
 .btn:disabled,
 .btn[disabled] {
-cursor: not-allowed;
-transform: none;
-opacity: 1;              /* важно: не даём общей прозрачности — дальше зададим точные цвета */
+    cursor: not-allowed;
+    transform: none;
+    opacity: 1;
 }
 
 .btn--filled {
-background: var(--color-text-gunmetal);
-color: var(--color-text-offwhite);
-border: 1px solid transparent;
+    background: var(--color-text-gunmetal);
+    color: var(--color-text-offwhite);
+    border: 1px solid transparent;
 }
 
 .btn--filled:hover:not(:disabled) {
-background: var(--color-surface-charcoal);
+    background: var(--color-surface-charcoal);
 }
-/* clicked */
+
 .btn--filled:active:not(:disabled) {
-filter: brightness(0.92);
+    filter: brightness(0.92);
 }
-/* disabled */
+
 .btn--filled:disabled {
-background: var(--color-surface-seasalt);
-color: var(--color-text-silver);
-border-color: transparent;
+    background: var(--color-surface-seasalt);
+    color: var(--color-text-silver);
+    border-color: transparent;
 }
 
 

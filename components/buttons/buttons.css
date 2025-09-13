@@ -3,61 +3,57 @@
    ========================================================= */
    .btn {
     transition: background .12s ease, color .12s ease, border-color .12s ease, box-shadow .12s ease, filter .12s ease;
-  }
-  
-  /* форма «пилюля» + базовая геометрия из макета */
-  .btn--pill { 
-    border-radius: 999px; 
-    padding: 12px 22px; 
-    min-height: 44px;
+}
+
+.btn--pill {
+    border-radius: 20px;
+    padding: 10px 20px;
+    height: 40px;
     gap: 10px;
-  }
-  
-  /* иконка слева у текстовых кнопок */
-  .btn__icon { 
-    inline-size: 20px; 
-    block-size: 20px; 
-    flex: 0 0 20px; 
-  }
-  
-  /* фокус-обводка */
-  .btn:focus-visible {
+}
+
+.btn__icon {
+    inline-size: 20px;
+    block-size: 20px;
+    flex: 0 0 20px;
+}
+
+.btn:focus-visible {
     outline: none;
     box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-text-gunmetal) 12%, transparent);
-  }
-  
-  /* курсор/общие состояния (переопределяем базу) */
-  .btn:disabled,
-  .btn[disabled] {
+}
+
+
+.btn:disabled,
+.btn[disabled] {
     cursor: not-allowed;
     transform: none;
-    opacity: 1;              /* важно: не даём общей прозрачности — дальше зададим точные цвета */
-  }
-  
+    opacity: 1;
+}
   /* =========================================================
      1) FILLED
      ========================================================= */
   /* default */
-  .btn--filled {
-    background: var(--color-text-gunmetal);
-    color: var(--color-text-offwhite);
-    border: 1px solid transparent;
-  }
-  /* hover */
-  .btn--filled:hover:not(:disabled) {
-    background: var(--color-surface-charcoal);
-  }
-  /* clicked */
-  .btn--filled:active:not(:disabled) {
-    filter: brightness(0.92);
-  }
-  /* disabled */
-  .btn--filled:disabled {
-    background: var(--color-surface-seasalt);
-    color: var(--color-text-silver);
-    border-color: transparent;
-  }
   
+.btn--filled {
+  background: var(--color-text-gunmetal);
+  color: var(--color-text-offwhite);
+  border: 1px solid transparent;
+}
+
+.btn--filled:hover:not(:disabled) {
+  background: var(--color-surface-charcoal);
+}
+
+.btn--filled:active:not(:disabled) {
+  filter: brightness(0.92);
+}
+
+.btn--filled:disabled {
+  background: var(--color-surface-seasalt);
+  color: var(--color-text-silver);
+  border-color: transparent;
+}
   /* =========================================================
      2) OUTLINED
      ========================================================= */
@@ -195,26 +191,26 @@
   /* disabled */
   .btn--link:disabled { color: var(--color-text-silver); text-decoration: none; }
   
-  /* =========================================================
-     6) ICON ONLY
-     Разметка:
-     <button class="btn btn--icon btn--filled" aria-label="…">…</button>
-     Или с outlined: <button class="btn btn--icon btn--outlined">…</button>
-     ========================================================= */
-  .btn--icon {
-    inline-size: 44px;
-    block-size: 44px;
-    padding: 0;
-    border-radius: 999px;
-    display: inline-grid;
-    place-items: center;
+/* =========================================================
+6) ICON ONLY
+Разметка:
+<button class="btn btn--icon btn--filled" aria-label="…">…</button>
+Или с outlined: <button class="btn btn--icon btn--outlined">…</button>
+========================================================= */
+.btn--icon {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
   }
   
   /* filled icon */
   .btn--icon.btn--filled { 
-    background: var(--color-text-gunmetal); 
-    color: var(--color-text-offwhite); 
-    border: 1px solid transparent;
+  background: var(--color-text-gunmetal); 
+  color: var(--color-text-offwhite); 
+  border: 1px solid transparent;
   }
   .btn--icon.btn--filled:hover:not(:disabled) { background: var(--color-surface-charcoal); }
   .btn--icon.btn--filled:active:not(:disabled) { filter: brightness(0.92); }
@@ -222,18 +218,19 @@
   
   /* outlined icon */
   .btn--icon.btn--outlined {
-    background: var(--color-surface-offwhite);
-    color: var(--color-text-gunmetal);
-    border: 1px solid var(--color-border-antiflash);
+  background: var(--color-surface-offwhite);
+  color: var(--color-text-gunmetal);
+  border: 1px solid var(--color-border-antiflash);
   }
   .btn--icon.btn--outlined:hover:not(:disabled) { background: var(--color-surface-seasalt); }
   .btn--icon.btn--outlined:active:not(:disabled) {
-    background: var(--color-text-gunmetal);
-    color: var(--color-text-offwhite);
-    border-color: var(--color-text-gunmetal);
+  background: var(--color-text-gunmetal);
+  color: var(--color-text-offwhite);
+  border-color: var(--color-text-gunmetal);
   }
   .btn--icon.btn--outlined:disabled {
-    background: var(--color-surface-offwhite);
-    color: var(--color-text-silver);
-    border-color: var(--color-border-antiflash);
+  background: var(--color-surface-offwhite);
+  color: var(--color-text-silver);
+  border-color: var(--color-border-antiflash);
   }
+  
